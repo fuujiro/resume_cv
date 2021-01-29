@@ -7,87 +7,95 @@
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks,breaklinks,
+            urlcolor=[rgb]{0.2,0.2,0.6},
+            linkcolor=[rgb]{0.2,0.2,0.6}
+}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
 
-% \name{Ziyang Feng}
-% \centerline{Software Development: Backend Dev. \& Full Stack}
-% \vspace{2ex}
-% % {E-mail}{mobilephone}{homepage}
-% % be careful of _ in emaill address
-% % {E-mail}{mobilephone}
-% % keep the last empty braces!
-% \contactInfo{fuujiro@qq.com}{(+86) 155-2489-2259}{ \url{https://github.com/fuujiro}}
+\name{Ziyang Feng}
+\centerline{Software Engineer: Backend Dev. \& Full Stack}
+\vspace{2ex}
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+% {E-mail}{mobilephone}
+% keep the last empty braces!
+\contactInfo{fuujiro@qq.com}{(+86) 155-2489-2259}{ \url{https://github.com/fuujiro}}
 
  
-% \section{\faGraduationCap\ Education}
-% \datedsubsection{\textbf{Waseda University}}{Sep. 2020 -- Expected Jul. 2022}
-% \textit{Master student} in Intelligent Computing 
-% \datedsubsection{\textbf{Dalian University of Technology}}{Sep. 2016 -- Jul. 2020}
-% \textit{Bachelor student} in Computer Science \& Technology
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Waseda University}}{Sep. 2020 -- Expected Jul. 2022}
+\textit{Master of Engineering} in Information, Production and Systems
+\datedsubsection{\textbf{Dalian University of Technology}}{Sep. 2016 -- Jul. 2020}
+\textit{Bachelor of Engineering} in Computer Science \& Technology
 
-% \section{\faUsers\ Project Experience}
-% \datedsubsection{\textbf{RPC Framework(\href{https://github.com/fuujiro/jiro-rpc-framework}{jiro-rpc-framework})}}{Sept. 2020 -- Oct. 2020}
-% %\role{Summer Intern}{Manager: xxx}
-% \begin{itemize}
-%   \item Dynamic proxy; automatic registration; multiple serialization methods; asynchronous non-blocking and heartbeat notification mechanism.
-%   \item Based on Nacos, implemented automatic service cancellation and load balancing strategy (LRU algorithm).
-% %  \item Optimized xxx 5\%
-% \end{itemize}
+\section{\faUsers\ Project Experience}
+\datedsubsection{\textbf{RPC Framework(\href{https://github.com/fuujiro/jiro-rpc-framework}{jiro-rpc-framework})}}{Sept. 2020 -- Oct. 2020}
+%\role{Summer Intern}{Manager: xxx}
+\begin{itemize}
+  \item Through dynamic proxy, with the Netty transmission architecture, implemented automatic registration with asynchronous non-blocking and heartbeat notification, implemented a variety of serialization methods.
+  \item Service registration and discovery based on Nacos realizes automatic service cancellation and load balancing strategies (random distribution, balanced weighted round-robin, consistent Hash).
+%  \item Optimized xxx 5\%
+\end{itemize}
 
-% \datedsubsection{\textbf{Distributed Systems (\href{https://github.com/fuujiro/MIT6.824-Labs}{MIT6.824-Labs})}}{May. 2020 -- Oct. 2020}
-% %\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-% According to MapReduce and Raft papers, understand and reproduce the core framework of the paper.
-% %Brief introduction: xxx
-% \begin{itemize}
-%   \item Based on the MapReduce, implemented the master's distribution task and the worker's calculation task.
-%   \item Understand the normal working of the Raft protocol and the heartbeat mechanism, how to choose the master (delay to avoid have two master at the same time), and how to achieve consistency.
-% %  \item xxx
-% \end{itemize}
+\datedsubsection{\textbf{Distributed Systems (\href{https://github.com/fuujiro/MIT6.824-Labs}{MIT6.824-Labs})}}{May. 2020 -- Oct. 2020}
+%\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
+According to MapReduce and Raft papers, understand and reproduce the core framework of the paper.
+%Brief introduction: xxx
+\begin{itemize}
+  \item Based on the MapReduce, implemented the master's distribution task and the worker's calculation task.
+  \item Understand the term and heartbeat mechanism of the Raft protocol, and how to achieve strong consistency.
+%  \item xxx
+\end{itemize}
 
-% \datedsubsection{\textbf{Time-Cross Applets}}{Dec. 2018 -- Jan. 2019}
-% %\role{\LaTeX, Maintainer}{Individual Projects}
-% The goal of this tool is to arrange the time for activities and improve office efficiency.
-% \begin{itemize}
-%   \item The front end implements Material Design components to realize the graphical animation effect.
-%   \item The back-end uses the SSM framework, MySQL as the primary database, and Redis as the high-concurrency secondary database to implement Restful-style access requests. The md5 salt encryption is used for user information, and the public development interface is reserved.
-% \end{itemize}
+\section{\faSitemap\ Intern Experience}
 
-% \section{\faSitemap\ Intern Experience}
+\datedsubsection{\textbf{Tencent Holdings Ltd. - LightSpeed \& Quantum Studios}}{Dec. 2020 -- Present}
+%\role{\LaTeX, Maintainer}{Individual Projects}
+%The goal of this task was to detect and correct spelling errors on Chinese essays.
+\begin{itemize}
+  \item With ZeroMQ, implemented an asynchronous and high-performance C/C++ service framework based on the Router-Dealer prototype, which provides asynchronous and concurrent support for game AI training.
+  \item Use Python to develop integrated tools, such as automatically pulling, downloading, decompressing and matching the md5 value, and calculating the number of containers and automatically loading Unity games.
+\end{itemize}
 
-% \datedsubsection{\textbf{HUAWEI TECHNOLOGIES CO., LTD.}}{Jun. 2019 -- Aug. 2019}
-% %\role{\LaTeX, Maintainer}{Individual Projects}
-% %The goal of this task was to detect and correct spelling errors on Chinese essays.
-% \begin{itemize}
-%   \item Implemented the monitoring of the gateway by the middleware and realize the load balancing of the gateway.
-%   \item Based on lua and go to complete the internal components of the company, to realize the logic between sub-modules and improve the usability of the system.
-% \end{itemize}
+\datedsubsection{\textbf{Huawei Technologies Co., Ltd. - CloudBU}}{Jun. 2019 -- Aug. 2019}
+%\role{\LaTeX, Maintainer}{Individual Projects}
+%The goal of this task was to detect and correct spelling errors on Chinese essays.
+\begin{itemize}
+  \item Implemented the monitoring of the gateway by the middleware and realize the load balancing of the gateway.
+  \item Based on lua and go to complete the internal components of the company, to realize the logic between sub-modules and improve the usability of the system.
+\end{itemize}
 
-% % Reference Test
-% %\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-% %An xxx optimized for xxx\cite{verma2015large}
-% %\begin{itemize}
-% %  \item main contribution
-% %\end{itemize}
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
 
-% \section{\faCogs\ Skills}
-% \begin{itemize}[parsep=0.5ex]
-%   \item Skilled in Java, C++, Shell, Git and \LaTeX, Familiar with data structures and algorithms and had good programming style.
-%   \item Familiar with Spring, SpringBoot, MyBatis and other back-end frameworks, and basic design patterns.
-%   \item Familiar with Docker and other sandbox virtual environments, and CI/CD Tools.
-% \end{itemize}
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  \item Skilled in Java, C++, Shell, Git and \LaTeX, Familiar with data structures \& algorithms and network programming, had good programming style.
+  \item Understand the operating system's memory management, TCP/IP protocol stack, and IO multiplexing.
+  \item Experienced in Spring, SpringBoot, MyBatis and other back-end frameworks, and basic design patterns.
+  \item Experienced in Java concurrent programming, thread pool mechanism and the understanding of JUC library.
+  \item Understand JVM memory distribution, class loader mechanism, garbage collection algorithm.
+  \item Familiar with Linux command shell and Docker \& virtual environments, and CI/CD Tools.
+\end{itemize}
 
-% \section{\faTrophy\ Academic Competitions}
-% \datedline{\textit{National University Student Innovation Project}~~Awarded in Robot-arm vision calibration}{Mar. 2019}
-% \datedline{\textit{\nth{1} Place}~~Awarded in Liaoning Province University Student Computer Application Competition}{Dec. 2018}
-% \datedline{\textit{\nth{1} Place}~~Awarded in National College Student Mathematics Competition Dalian Division}{Jul. 2017}
-% \datedline{\textit{\nth{1} Prize}~~Awarded in Dalian University of Technology "Ti" Cup Electronic Design Competition}{Jun. 2017}
+\section{\faTrophy\ Academic Competitions}
+\datedline{\textit{National University Student Innovation Project}~~Awarded in Robot-arm vision calibration}{Mar. 2019}
+\datedline{\textit{\nth{1} Prize}~~Awarded in Liaoning Province University Student Computer Application Competition}{Dec. 2018}
+\datedline{\textit{\nth{1} Prize}~~Awarded in National College Student Mathematics Competition Dalian Division}{Jul. 2017}
+\datedline{\textit{\nth{1} Prize}~~Awarded in Dalian University of Technology "Ti" Cup Electronic Design Competition}{Jun. 2017}
 
 
-% \clearpage
+\clearpage
 
 \name{冯子扬 }
 \centerline{求职意向: 后端开发 | 软件研发}
@@ -104,7 +112,7 @@
 \vspace{-1ex}
  
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{早稻田大学}~~ \ 硕士, Information, Production and Systems }{2020.09 -- 预计2022.07毕业}
+\datedsubsection{\textbf{早稻田大学}~~ \ 硕士, 情报生产系统工学 }{2020.09 -- 预计2022.07毕业}
 
 \datedsubsection{\textbf{大连理工大学}~~ \ 学士, 计算机科学与技术 }{2016.09 -- 2020.06}
 \vspace{1ex}
@@ -132,18 +140,6 @@
 \end{itemize}
 \end{onehalfspacing}
 
-\vspace{-1.5ex}
-
-\datedsubsection{\textbf{时间叉叉（小程序）}}{2018.12 -- 2019.01}
-%\role{\LaTeX, Python}{个人项目}
-\begin{onehalfspacing}
-实现一个用于安排集体时间，提高办公效率的效率工具，《微信-SegmentFault小程序黑马赛》作品。
-\begin{itemize}
-  \item 前端实现Material Design组件，实现时间交叉区域的高亮动画，抓住用户眼球。
-  \item 后端使用SSM框架，MySQL作为主数据库，实现Restful风格的请求，对于用户信息使用md5盐值加密，保留公共开发接口。
-\end{itemize}
-\end{onehalfspacing}
-
 % Reference Test
 %\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
 %An xxx optimized for xxx\cite{verma2015large}
@@ -151,10 +147,19 @@
 %  \item main contribution
 %\end{itemize}
 
-\vspace{-1ex}
-
 \section{\faSitemap\ 实习经历}
-\datedsubsection{\textbf{华为技术有限公司~/~软件工程师}}{2019.06 -- 2019.08}
+\datedsubsection{\textbf{腾讯游戏 - 光子工作室群~/~ 后台开发实习生}}{2020.12 -- Present}
+\vspace{-0.5ex}
+%\role{\LaTeX, Python}{个人项目}
+\begin{onehalfspacing}
+%优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\begin{itemize}
+  \item 以ZeroMQ为网络通信组件，根据Router-Dealer原型来开发了一个异步高性能的C/C++后台服务框架，为游戏AI训练提供异步并发的支持，实现了动态接入服务节点和多种负载均衡策略。
+  \item 使用Python开发工作室的集成工具类，如自动拉取下载解压缩并匹配md5值，处理腾讯云上的docker容器的创建销毁，以及计算容器数量归类和unity游戏自动加载等。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{华为技术有限公司 - 云核心网~/~软件开发实习生}}{2019.06 -- 2019.08}
 \vspace{-0.5ex}
 %\role{\LaTeX, Python}{个人项目}
 \begin{onehalfspacing}
