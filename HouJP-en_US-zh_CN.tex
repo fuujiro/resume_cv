@@ -9,6 +9,8 @@
 \usepackage{cite}
 \usepackage[svgnames]{xcolor}
 \usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{graphicx} 
 \hypersetup{colorlinks,breaklinks,
             urlcolor=[rgb]{0.2,0.2,0.6},
             linkcolor=[rgb]{0.2,0.2,0.6}
@@ -26,37 +28,50 @@
 % be careful of _ in emaill address
 % {E-mail}{mobilephone}
 % keep the last empty braces!
-\contactInfo{fuujiro@qq.com}{(+86) 155-2489-2259}{ \url{https://github.com/fuujiro}}
+\contactInfo{fuujiro@qq.com}{(+86) 155-2489-2259}{ \faGithub\ \url{https://github.com/fuujiro}}
 \vspace{-1.5ex}
  
 \section{\faGraduationCap\ Education}
 \datedsubsection{\textbf{Waseda University}}{Sep. 2020 -- Expected Jul. 2022}
+\vspace{-0.5ex}
 \textit{Master of Engineering} in Information, Production and Systems
 \vspace{-1ex}
 \datedsubsection{\textbf{Dalian University of Technology}}{Sep. 2016 -- Jul. 2020}
-\textit{Bachelor of Engineering} in Computer Science \& Technology
 \vspace{-0.5ex}
+\textit{Bachelor of Engineering} in Computer Science \& Technology
+\vspace{-0.6ex}
 
 \section{\faSitemap\ Intern Experience}
-\datedsubsection{\textbf{Tencent Games - LightSpeed \& Quantum Studios}}{Dec. 2020 -- Present}
-%\role{\LaTeX, Maintainer}{Individual Projects}
+\vspace{-0.5ex}
+\datedsubsection{\textbf{\includegraphics[scale=0.5]{img/alibabacloud.pdf} Alibaba Cloud - Computing Platform - DataWorks}}{Apr. 2021 -- Present}
+%\role{\LaTeX, Maintainer}{Individual Projects} \includegraphics[]{img/alibabacloud.pdf}
+%The goal of this task was to detect and correct spelling errors on Chinese essays.
+\begin{itemize}
+  \item Using the SofaArk framework and customizing the class loading and class isolation mechanism, and the reflection mechanism is used to realize plug-in initialization, and service registration and reference.
+  \item Using the Quartz framework, through its timing task scheduling, the heartbeat failover mechanism is implemented to ensure the high availability of the middle station and to achieve asynchronous high concurrency,
+\end{itemize}
+\vspace{-2.5ex}
+
+\datedsubsection{\textbf{\includegraphics[scale=0.5]{img/tencentqq.pdf} Tencent Games - LightSpeed \& Quantum Studios}}{Dec. 2020 -- Apr. 2021}
+%\role{\LaTeX, Maintainer}{Individual Projects} \includegraphics[]{img/alibabacloud.pdf}
 %The goal of this task was to detect and correct spelling errors on Chinese essays.
 \begin{itemize}
   \item With ZeroMQ, implemented an asynchronous and high-performance C/C++ service framework based on the Router-Dealer prototype, which provides asynchronous and concurrent support for game AI training.
   \item Use Python to develop integrated tools, such as automatically pulling and matching the md5 value; Use deep learning inference frameworks NCNN and TNN for end-to-side acceleration and improve AI functions.
 \end{itemize}
-\vspace{-2ex}
+\vspace{-2.5ex}
 
-\datedsubsection{\textbf{Huawei Technologies Co., Ltd. - CloudBU}}{Jun. 2019 -- Aug. 2019}
+\datedsubsection{\textbf{\includegraphics[scale=0.5]{img/huawei.pdf} Huawei Technologies Co., Ltd. - CloudBU}}{Jun. 2019 -- Aug. 2019}
 %\role{\LaTeX, Maintainer}{Individual Projects}
 %The goal of this task was to detect and correct spelling errors on Chinese essays.
 \begin{itemize}
-  \item Use C to complete the monitoring and load balancing of the gateway traffic by the middleware, and understand the current limiting algorithm (leaky bucket, token bucket).
-  \item Based on Python and Go to complete the IP location and script test tool, optimize the slow query of the client's IP in the database.
+  \item Use C to complete load balancing of the gateway, and the limiting algorithm (leaky bucket, token bucket).
+  \item Based on Python and Go to complete the IP script test tool, optimize the slow query of the client's IP.
 \end{itemize}
-\vspace{-1ex}
+\vspace{-1.5ex}
 
 \section{\faUsers\ Project Experience}
+\vspace{-0.5ex}
 \datedsubsection{\textbf{RPC Framework(\href{https://github.com/fuujiro/jiro-rpc-framework}{jiro-rpc-framework})}}{Sept. 2020 -- Oct. 2020}
 %\role{Summer Intern}{Manager: xxx}
 \begin{itemize}
@@ -64,19 +79,17 @@
   \item Service registration and discovery based on Nacos realizes automatic service cancellation and load balancing strategies (random distribution, balanced weighted round-robin, consistent Hash).
 %  \item Optimized xxx 5\%
 \end{itemize}
-\vspace{-2ex}
+\vspace{-2.5ex}
 
 \datedsubsection{\textbf{Distributed Systems (\href{https://github.com/fuujiro/MIT6.824-Labs}{MIT6.824-Labs})}}{May. 2020 -- Oct. 2020}
 %\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-According to MapReduce and Raft papers, understand and reproduce the core framework of the paper.
 %Brief introduction: xxx
 \begin{itemize}
   \item Based on the MapReduce, implemented the master's distribution task and the worker's calculation task.
   \item Understand the Raft protocol and the heartbeat mechanism, such as the election and tenure, log synchronization and compression, member changes, and strong consistency.
 %  \item xxx
 \end{itemize}
-\vspace{-1ex}
-
+\vspace{-1.5ex}
 
 % Reference Test
 %\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
@@ -85,6 +98,7 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
 %  \item main contribution
 %\end{itemize}
 
+
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
   \item Understand the operating system's memory management, TCP/IP protocol stack, and IO multiplexing.
@@ -92,17 +106,15 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
   \item Experienced in Spring, SpringBoot, MyBatis and other back-end frameworks, and basic design patterns.
   \item Experienced in Java concurrent programming, thread pool mechanism and the understanding of JUC library.
   \item Understand JVM memory distribution, class loader mechanism, garbage collection algorithm.
-  \item Familiar with middleware such as Kafka, ElasticSearch and Thymeleaf template engine, and understand the three-tier MVC architecture.
+  \item Familiar with middleware such as Kafka, ElasticSearch and Thymeleaf template engine.
   \item Familiar with Linux command shell and Docker \& virtual environments, and CI/CD Tools.
 \end{itemize}
-\vspace{-1ex}
+\vspace{-1.5ex}
 
 \section{\faTrophy\ Academic Competitions}
 \datedline{\textit{National University Student Innovation Project}~~Awarded in Robot-arm vision calibration}{Mar. 2019}
 \datedline{\textit{\nth{1} Prize}~~Awarded in Liaoning Province University Student Computer Application Competition}{Dec. 2018}
 \datedline{\textit{\nth{1} Prize}~~Awarded in National College Student Mathematics Competition Dalian Division}{Jul. 2017}
-\datedline{\textit{\nth{1} Prize}~~Awarded in Dalian University of Technology "Ti" Cup Electronic Design Competition}{Jun. 2017}
-
 
 \clearpage
 
@@ -111,7 +123,7 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
 % {E-mail}{mobilephone}{homepage}
 % be careful of _ in emaill address
 \vspace{1ex}
-\contactInfo{fuujiro@qq.com}{(+86) 155-2489-2259}{ \url{https://github.com/fuujiro/} }
+\contactInfo{fuujiro@qq.com}{(+86) 155-2489-2259}{\faGithub\ \url{https://github.com/fuujiro/} }
 
 
 % {E-mail}{mobilephone}
@@ -129,7 +141,18 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
 %\vspace{-1ex}
 
 \section{\faSitemap\ 实习经历}
-\datedsubsection{\textbf{腾讯游戏 - 光子工作室群~/~ 后台开发实习生}}{2020.12 -- Present}
+\datedsubsection{\textbf{\includegraphics[scale=0.5]{img/alibabacloud.pdf} 阿里云 - 计算平台DataWorks ~/~ 后台开发实习生}}{2021.4 -- 至今为止}
+\vspace{-0.5ex}
+%\role{\LaTeX, Python}{个人项目}
+\begin{onehalfspacing}
+%优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\begin{itemize}
+  \item 利用SofaArk框架，对于类加载、类隔离机制的定制，使得各插件互相隔离，利用反射机制实现插件初始化，和服务注册及引用，打造了一个热部署的hook锚点机制的插件化管控中台。
+  \item 使用Quartz任务调度框架，通过其定时任务调度，实现心跳的failover机制来保证中台的高可用；使用线程池机制来实现异步高并发，数据库使用双机房主从备份来保证高可用。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{\includegraphics[scale=0.5]{img/tencentqq.pdf} 腾讯游戏 - 光子工作室群 ~/~ 后台开发实习生}}{2020.12 -- 2021.4}
 \vspace{-0.5ex}
 %\role{\LaTeX, Python}{个人项目}
 \begin{onehalfspacing}
@@ -140,7 +163,7 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{华为技术有限公司 - 云核心网~/~软件开发实习生}}{2019.06 -- 2019.08}
+\datedsubsection{\textbf{\includegraphics[scale=0.5]{img/huawei.pdf} 华为技术有限公司 - 云核心网 ~/~ 软件开发实习生}}{2019.06 -- 2019.08}
 \vspace{-0.5ex}
 %\role{\LaTeX, Python}{个人项目}
 \begin{onehalfspacing}
@@ -155,17 +178,20 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
 \datedsubsection{\textbf{RPC框架 (\href{https://github.com/fuujiro/jiro-rpc-framework}{jiro-rpc-framework})} }{2020.09 -- 2020.10}
 %\role{实习}{经理: 高富帅}
 %xxx后端开发
+\vspace{-0.5ex}
+\begin{onehalfspacing}
 \begin{itemize}
-  \item 通过动态代理，实现自动注册服务；实现了多种序列化方式；实现Netty传输和通用序列化接口；迭代项目的IO复用模型，从BIO到NIO（select和epoll），实现了异步非阻塞和心跳通知机制。
-  \item 基于 Nacos 的服务注册与发现，实现自动注销服务和负载均衡策略（随机分发，平衡加权轮询，一致性Hash）。
+  \item 通过动态代理，实现服务注册和引用，实现Netty传输和通用序列化接口，迭代项目的IO复用模型，从BIO到NIO（select和epoll），实现了异步非阻塞和心跳通知机制。
+  \item 实现自动注销服务和负载均衡策略（随机分发，平衡加权轮询，一致性Hash）。
 \end{itemize}
+\end{onehalfspacing}
 
 \vspace{-1.5ex}
 
 \datedsubsection{\textbf{MIT6.824分布式系统 (\href{https://github.com/fuujiro/MIT6.824-Labs}{MIT6.824-Labs})}}{2020.05 -- 2020.07}
 %\role{Golang, Linux}{个人项目，和富帅糕合作开发}
+\vspace{-0.5ex}
 \begin{onehalfspacing}
-根据MapReduce，Raft等经典论文，理解并复现其论文核心框架。
 \begin{itemize}
   \item 基于 MapReduce 算法, 实现了master的分发任务以及worker的计算任务，实现了一个word-counter。
   \item 理解Raft协议正常工作和心跳机制，如选主与任期，日志同步和压缩，成员变更，强一致性。
@@ -184,15 +210,12 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
 \section{\faCogs\ 个人能力}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 理解操作系统的内存管理机制，熟悉TCP/IP协议栈，网络编程以及IO多路复用。
-  \item 熟悉 Java、C++、Python、Go，熟悉基本数据结构和算法,有良好的编程风格。
-  \item 理解 ArrayList、HashMap、ConcurrentHashMap等Java类库的基本底层原理。
-  \item 熟悉 Java并发编程，多线程和线程池机制以及JUC类库的使用，理解基本的设计模式。
-  \item 使用 Spring、SpringMVC、SpringBoot、MyBatis等框架，理解IOC以及AOP思想。
-  \item 理解 JVM内存分布，类加载机制，垃圾回收算法和常用GC调优策略。
+  \item 理解操作系统的内存管理机制，熟悉TCP/IP协议栈，网络编程，IO多路复用，和常用设计模式。
+  \item 熟悉 SpringBoot、SpringMVC、MyBatis框架，理解MVC三层架构，理解IOC和AOP思想。
+  \item 熟悉 Java并发编程，多线程和线程池机制以及常用JUC类库的底层原理。
+  \item 理解 JVM内存分布，类加载、类隔离机制，垃圾回收算法和常用GC调优策略。
   \item 理解 数据库的ACID原则和三大范式，熟悉 MySQL的存储引擎、事务及隔离级别、锁、索引，Redis的数据类型、过期和淘汰策略、缓存穿透和雪崩、分布式锁。
-  \item 熟悉使用Kafka，ElasticSearch等中间件以及Thymeleaf模板引擎，理解MVC三层架构。
-  \item 熟练使用 \LaTeX，MarkDown，Git等工具，理解Docker各组件及其命令，了解CI/CD等DevOps。
+  \item 熟悉使用Kafka，ElasticSearch等中间件以及\LaTeX，MarkDown，Docker，Git等工具。
 \end{itemize}
 
 \vspace{-1ex}
@@ -202,7 +225,6 @@ According to MapReduce and Raft papers, understand and reproduce the core framew
 \datedline{\textit{国家级大学生创新项目}~机器人手臂视觉标定}{2019.03}
 \datedline{\textit{一等奖}~辽宁省大学生计算机应用大赛}{2018.12}
 \datedline{\textit{一等奖}~全国大学生数学竞赛大连赛区}{2017.06}
-\datedline{\textit{一等奖}~大连理工大学“Ti”杯电子设计大赛}{2017.05}
 
 
 %\section{\faInfo\ 其他}
