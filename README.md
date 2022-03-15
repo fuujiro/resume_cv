@@ -1,8 +1,8 @@
 ****
 
 ##	<center>中英文个人简历</center>
-####	<center>Author: HouJP</center>
-####	<center>E-mail: houjp1992@gmail.com</center>
+####	<center>Author: JarryFeng</center>
+####	<center>E-mail: fuujiro@qq.com</center>
 
 ****
 
@@ -16,7 +16,7 @@
 
 ###	<a name="intro">项目介绍</a>
 
-HouJP的中英文简历，使用latex编译生成。
+Jarry Feng的中英文简历，使用latex编译生成。
 
 ****
 
@@ -35,4 +35,4 @@ HouJP的中英文简历，使用latex编译生成。
 
 ###	<a name="link">参考链接</a>
 
-本简历参考自[billryan的模板](https://github.com/billryan/resume/)。
+本简历参考自[Jarry Feng的模板](https://github.com/fuujiro/myResume/)。
