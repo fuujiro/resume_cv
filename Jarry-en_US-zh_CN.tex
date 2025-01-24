@@ -146,9 +146,9 @@
 \begin{onehalfspacing}
 %优雅的 \LaTeX\ 简历模板, https://github.com/fuujiro/myResume
 \begin{itemize}
-  \item 开发检查器以及其注册配置框架，每日触发检查数万次，建设高可用的failover心跳机制。
-  \item 基于MaxCompute离线大数据引擎开发，搭建了完整的离线数仓分层加工框架，监测表、任务数据的特征与波动，提供针对存储、计算的治理方案和工具。
-  \item 实现OLAP（Hologres）与OLTP（MySQL）的多数据源访问机制，针对性响应页面接口优化，使用Flink 链路来保证数据库一致性，以及提供监控方案和降级策略。
+  \item 开发检查器以及其注册配置框架，日触发检查数万次，建设高可用的failover心跳机制。
+  \item 基于MaxCompute大数据引擎开发，搭建离线数仓，分层清洗加工，监测（任务、表）数据的特征、血缘和波动，日产出上百万的治理项，并提供针对计算、存储的解决方案。
+  \item 治理报表查询场景深度优化，实现OLAP与OLTP结合的多数据源访问机制，实时链路同步保证数据一致性，部署监控方案和降级策略。
 \end{itemize}
 \end{onehalfspacing}
 
@@ -175,16 +175,16 @@
   \item 建设大数据离线数仓工程，划分ODS层抽取各数据源的raw数据，Schema层统一数据格式，DWD层数据清洗加工转换，DWS层数据聚合，RPT
 层数据加载至消费方。
   \item 设计并开发对外API接口，方便客户批量操作，如列出治理项问题、配置检查器、下线任务等。
-  \item 治理报表查询聚合搜索场景，接口性能深度优化，OLTP（MySQL索引优化）与OLAP（Hologres列簇优化查询）结合，依靠FLink CDC链路保证数据一致性。
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{治理工具 \& 数据质量}}{}
+\datedsubsection{\textbf{治理工具 \& 查询性能优化}}{}
 \vspace{-0.5ex}
 \begin{onehalfspacing}
 \begin{itemize}
+  \item 治理报表查询聚合搜索场景，接口性能深度优化，OLTP（MySQL索引优化）与OLAP（Hologres列簇优化查询）结合，依靠FLink CDC链路保证数据一致性。
   \item 为各治理项开发自动化工具，如一键补全上游依赖，数据倾斜长尾调优(MapJoin、SkewJoin)。
-  \item 提供专项自动化治理方案，如任务优雅下线（提供完善的下线链路，如延迟调度、暂定虚拟根节点、重命名产出表、一键回滚、下线API等），节点依赖切换等。
+  \item 提供专项治理方案，如任务优雅下线（提供完善的下线链路，如延迟调度、暂定虚拟根节点、重命名产出表、一键回滚、下线API等），节点依赖切换等。
   \item 使用观测者模式和策略模式完善治理通知，提供治理项在各维度（租户、空间、个人）下各产品（钉钉、微信、飞书、webhook）的报表和提醒通知。
   \item 开发数据清洗，支持表及字段（固定值、唯一值、波动率）等数据质量规则，产出清洗结果报表。
 \end{itemize}
