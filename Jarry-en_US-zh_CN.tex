@@ -146,7 +146,7 @@
 \begin{onehalfspacing}
 %优雅的 \LaTeX\ 简历模板, https://github.com/fuujiro/myResume
 \begin{itemize}
-  \item 开发了检查器以及其注册配置框架，每日触发检查数万次，建设高可用的failover心跳机制。
+  \item 开发检查器以及其注册配置框架，每日触发检查数万次，建设高可用的failover心跳机制。
   \item 基于MaxCompute离线大数据引擎开发，搭建了完整的离线数仓分层加工框架，监测表、任务数据的特征与波动，提供针对存储、计算的治理方案和工具。
   \item 实现OLAP（Hologres）与OLTP（MySQL）的多数据源访问机制，针对性响应页面接口优化，使用Flink 链路来保证数据库一致性，以及提供监控方案和降级策略。
 \end{itemize}
@@ -159,9 +159,9 @@
 \vspace{-0.5ex}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 检查器是作用于数据治理的事前阶段，通过SQL解析，开发了20余个检查器（如高费用SQL、表及字段存在性\&一致性检查等）,对用户运行、提交、发布的代码判断拦截，日检查达万次量级
-  \item 通过反射机制来实现检查器的注册和引用，框架也支持二方包机制的集团内的三方接入
-  \item 建设了高可用的failover机制，实现各机器定时上报心跳，断线抢主和对失败任务二次分发
+  \item 检查器作用于事前阶段，通过SQL解析，开发20余个检查器（如高费用SQL、表及字段存在性、禁止简单加工等）,对用户运行、提交、发布进行判断拦截，日检查达万次量级。
+  \item 基于SofaArk，通过反射机制来实现检查器注册和引用，支持三方接入自定义检查器。
+  \item 建设高可用的Failover机制，实现各机器定时上报心跳，掉线抢主和对失败任务二次分发。
 \end{itemize}
 \end{onehalfspacing}
 
@@ -171,20 +171,22 @@
 \vspace{-0.5ex}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 治理项是作用于事中阶段，设计五大治理领域（研发、存储、计算、质量、安全），开发了60余个治理项（如上游依赖缺失、任务运行时间超长，持续导入一致等），日产出百万量级的治理项问题
-  \item 建设了一套完整的大数据离线框架，从Mysql同步至MaxCompute离线大数据引擎，进行T+1的任务、表血缘链路追踪、定位、加工、收益计算、健康打分、回流的全链路加工流程
-  \item 设计并开发一系列高可用、高质量、高响应的数据治理API接口（如列出治理项问题、检查器配置、任务优雅下线、加白名单等）
+  \item 治理项作用于事中阶段，设计五大领域（研发、存储、计算、质量、安全），开发了60余个治理项（如上游依赖缺失、数据倾斜、持续导入一致等），日调度进行T+1天的（任务、表）血缘链路追踪、数据加工、收益计算、健康打分、报表回流的全链路加工，日产出百万量级的治理项问题。
+  \item 建设大数据离线数仓工程，划分ODS层抽取各数据源的raw数据，Schema层统一数据格式，DWD层数据清洗加工转换，DWS层数据聚合，RPT
+层数据加载至消费方。
+  \item 设计并开发对外API接口，方便客户批量操作，如列出治理项问题、配置检查器、下线任务等。
+  \item 治理报表查询聚合搜索场景，接口性能深度优化，OLTP（MySQL索引优化）与OLAP（Hologres列簇优化查询）结合，依靠FLink CDC链路保证数据一致性。
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{数据质量 \& 治理工具}}{}
+\datedsubsection{\textbf{治理工具 \& 数据质量}}{}
 \vspace{-0.5ex}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 为各治理项开发自动化工具，如一键补全上游依赖，分析表和任务血缘的差异实现自动化补全
-  \item 优化页面响应，深度调优SQL性能优化，实现了MySQL和Hologres的多数据源访问方案，使用flink cdc来保证数据源的一致性，以及对应的监控和降级策略
-  \item 提供专项自动化治理方案，如任务优雅下线（提供完善的下线链路，如延迟调度、暂定虚拟根节点、重命名产出表、一键回滚、下线API等），节点依赖切换等
-  \item 使用观测者模式和策略模式完善治理通知，提供治理项在各维度（租户、空间、个人）下各产品（钉钉、微信、飞书、webhook）的报表和提醒通知
+  \item 为各治理项开发自动化工具，如一键补全上游依赖，数据倾斜长尾调优(MapJoin、SkewJoin)。
+  \item 提供专项自动化治理方案，如任务优雅下线（提供完善的下线链路，如延迟调度、暂定虚拟根节点、重命名产出表、一键回滚、下线API等），节点依赖切换等。
+  \item 使用观测者模式和策略模式完善治理通知，提供治理项在各维度（租户、空间、个人）下各产品（钉钉、微信、飞书、webhook）的报表和提醒通知。
+  \item 开发数据清洗，支持表及字段（固定值、唯一值、波动率）等数据质量规则，产出清洗结果报表。
 \end{itemize}
 \end{onehalfspacing}
 
@@ -206,7 +208,7 @@
 \begin{itemize}[parsep=0.5ex]
   \item 熟悉 Java并发编程，SpringBoot框架，多线程和线程池机制以及常用JUC类库的底层原理。
   \item 理解 JVM内存分布，类加载、类隔离机制，垃圾回收算法和常用GC调优策略。
-  \item 理解 OLAP与OLTP数据库原理，熟悉 MySQL的存储引擎、事务及隔离级别、锁、索引
+  \item 理解 OLAP与OLTP数据库原理，熟悉 MySQL的存储引擎、事务及隔离级别、锁、索引。
   \item AWS | Alibaba Cloud | Docker | Git | Maven | Junit | Prometheus | Grafana
 \end{itemize}
 
